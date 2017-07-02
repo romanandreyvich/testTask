@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13154.30" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Employee" representedClassName=".Employee" syncable="YES">
+        <attribute name="fio" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Task" inverseName="employee" inverseEntity="Task" syncable="YES"/>
+        <relationship name="workshop" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workshop" inverseName="employees" inverseEntity="Workshop" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName=".Task" syncable="YES">
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDone" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="employee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Employee" inverseName="tasks" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <entity name="Workshop" representedClassName=".Workshop" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="employees" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="workshop" inverseEntity="Employee" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Employee" positionX="43" positionY="-124" width="128" height="88"/>
+        <element name="Task" positionX="279" positionY="-126" width="128" height="88"/>
+        <element name="Workshop" positionX="-182" positionY="-109" width="128" height="73"/>
+    </elements>
+</model>

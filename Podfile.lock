@@ -1,0 +1,12 @@
+PODS:
+  - INSPersistentContainer (1.0.2)
+
+DEPENDENCIES:
+  - INSPersistentContainer
+
+SPEC CHECKSUMS:
+  INSPersistentContainer: 7e04a0d332ba075441ce0ee73d584ce84d76ac23
+
+PODFILE CHECKSUM: d44464cf51a98558f8b3046a7435323d0ed700af
+
+COCOAPODS: 1.2.0
